@@ -1,0 +1,34 @@
+extends ./layouts/index
+
+block slider
+  .slider
+    h1 Rio de Janeiro
+    em Aventure
+
+block content
+  main.container.mt-5
+    h2.text-center.mb-5 About us
+    .row.mb-5
+      .col-md-6
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tortor lectus, bibendum vitae nunc ac, sollicitudin facilisis sapien. In viverra sit amet metus ac scelerisque.
+        p Nullam blandit lorem at hendrerit maximus. Vivamus fermentum, urna ac malesuada varius, neque odio finibus justo, eu posuere libero lorem ac nibh.
+      .col-md-6
+        img.img-fluid(
+          src="/img/inicio_nosotros.jpg",
+          alt="Imagen nosotros en home"
+        )
+    .row.proximos-viajes
+      h2.d-block.text-center.w-100 Next trips
+      include ./layouts/travelsBlock
+  .descuento
+    .container
+      .row
+        .col-md-6
+          .contenido
+            h3 5% Discount
+            p.titulo Canada Travel
+            p.fecha March 20, 2022 - March 28, 2022
+            p.precio $3000
+  .container
+    h2.mt-5.text-center Testimonials
+    include ./layouts/testimonialsBlock

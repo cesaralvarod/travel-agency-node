@@ -1,0 +1,32 @@
+extends ./layouts/index
+
+block content
+  main.container.mt-5
+    .row
+      .col-md-5
+        img.img-fluid(src="img/nosotros.jpg", alt="About us")
+      .col-md-7
+        h1= namePage
+        blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam velit eros, gravida ac erat aliquam, efficitur molestie sem. In a nisl ullamcorper, lobortis arcu at, porttitor nulla. Sed fringilla eros augue, id venenatis justo molestie sed.
+        p Sed lacinia at augue at pretium. Vestibulum suscipit, leo ut condimentum venenatis, purus erat vestibulum magna, non dictum massa magna a leo. Fusce viverra finibus turpis at gravida. Fusce feugiat, nisi vitae dictum ornare, tellus enim semper mi, scelerisque molestie dui eros sit amet tortor.
+  .listado-iconos
+    .container.mt-5.py-5.text-center
+      .row
+        .col-md-4
+          img.img-fluid.mb-4(
+            src="img/icono_seguridad.svg",
+            alt="Security icon"
+          )
+          h2.mb-4 Security
+          p Nam varius nunc non orci tristique ultrices. Suspendisse porttitor ligula ante sed sagittis justo cursus ac.
+        .col-md-4
+          img.img-fluid.mb-4(
+            src="img/icono_destinos.svg",
+            alt="Destination icon"
+          )
+          h2.mb-4 Best Destination
+          p Nam varius nunc non orci tristique ultrices. Suspendisse porttitor ligula ante sed sagittis justo cursus ac.
+        .col-md-4
+          img.img-fluid.mb-4(src="img/icono_precio.svg", alt="Price icon")
+          h2.mb-4 Best Prices
+          p Nam varius nunc non orci tristique ultrices. Suspendisse porttitor ligula ante sed sagittis justo cursus ac.
