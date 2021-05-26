@@ -2,6 +2,9 @@ import express from "express";
 import router from "./routes/index.js";
 import path from "path";
 import db from "./config/db.js";
+import dotenv from "dotenv";
+
+dotenv.config({ path: "variables.env" });
 
 const app = express();
 
@@ -17,15 +20,16 @@ const __dirname = path.resolve();
 
 // Set port
 
-app.set("port", 4000);
+app.set("host", process.env.HOST || "0.0.0");
+app.set("port", process.env.PORT || 4000);
 
 // Set dir views
 
-app.set("views", path.join(__dirname, "src/views"));
+app.set("views", path.join(__dirname, "server/views"));
 
 // Set dir public
 
-app.use(express.static("src/public"));
+app.use(express.static("public"));
 
 // Pug
 
@@ -50,6 +54,6 @@ app.use("/", router);
 
 // Run server
 
-app.listen(app.get("port"), () => {
-  console.log("Server runing on port " + app.get("port"));
+app.listen(app.get("port"), app.get("host"), () => {
+  console.log("Server runing on " + app.get("host") + ":" + app.get("port"));
 });
