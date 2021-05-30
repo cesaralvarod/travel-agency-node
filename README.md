@@ -74,7 +74,7 @@ In both cases the project will run on **localhost:4000**
 To deploy the project you will execute the following command:
 
 ```
-npm build
+npm run build
 ```
 
 # Copyright
