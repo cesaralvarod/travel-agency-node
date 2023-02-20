@@ -20,8 +20,8 @@ const __dirname = path.resolve();
 
 // Set port
 
-app.set("host", process.env.HOST || "0.0.0");
-app.set("port", process.env.PORT || 4000);
+app.set("host", process.env.HOST || "0.0.0.0");
+app.set("port", process.env.PORT || 8080);
 
 // Set dir views
 
